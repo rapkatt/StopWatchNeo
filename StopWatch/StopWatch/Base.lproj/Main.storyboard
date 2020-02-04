@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-AH-ZSx">
+                                <rect key="frame" x="32.666666666666657" y="259" width="310" height="197.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BB-lU-gxa">
+                                        <rect key="frame" x="9.3333333333333428" y="0.0" width="291.33333333333326" height="83.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="BSh-bz-OMV">
+                                        <rect key="frame" x="0.0" y="133.66666666666669" width="310" height="64"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmo-AC-Bnj">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <state key="normal" image="stop"/>
+                                                <connections>
+                                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBU-2k-r2a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlz-4T-SjT">
+                                                <rect key="frame" x="123" y="0.0" width="64" height="64"/>
+                                                <state key="normal" image="ui-2"/>
+                                                <connections>
+                                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="teX-QY-LSo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCO-9V-Fk3">
+                                                <rect key="frame" x="246" y="0.0" width="64" height="64"/>
+                                                <state key="normal" image="play-2"/>
+                                                <connections>
+                                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0k-Hx-zYa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vCO-9V-Fk3" firstAttribute="leading" secondItem="mlz-4T-SjT" secondAttribute="trailing" constant="59" id="9f5-Pi-0xy"/>
+                                            <constraint firstItem="mlz-4T-SjT" firstAttribute="leading" secondItem="fmo-AC-Bnj" secondAttribute="trailing" constant="59" id="PfH-2E-JQT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tPd-VF-wzl">
+                                <rect key="frame" x="0.0" y="747" width="375" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77504280821917804" green="0.58325579589712595" blue="0.14892769607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1FB-AH-ZSx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="215" id="hPQ-rf-mwg"/>
+                            <constraint firstItem="1FB-AH-ZSx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rBb-vA-Sng"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseOutlet" destination="mlz-4T-SjT" id="7o8-gB-xee"/>
+                        <outlet property="startOutlet" destination="vCO-9V-Fk3" id="rRl-ul-UVN"/>
+                        <outlet property="stopOutlet" destination="fmo-AC-Bnj" id="CZM-Eh-1nI"/>
+                        <outlet property="timeLabel" destination="5BB-lU-gxa" id="Azf-uS-WJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="129.31034482758622"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play-2" width="64" height="64"/>
+        <image name="stop" width="64" height="64"/>
+        <image name="ui-2" width="64" height="64"/>
+    </resources>
+</document>
