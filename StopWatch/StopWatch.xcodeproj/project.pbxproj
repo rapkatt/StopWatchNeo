@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE267A0923E9AA6D00F74DB9 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE267A0823E9AA6D00F74DB9 /* SecondScreen.swift */; };
 		AE3B4A1023E6D7970029A06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B4A0F23E6D7970029A06F /* AppDelegate.swift */; };
 		AE3B4A1223E6D7970029A06F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B4A1123E6D7970029A06F /* SceneDelegate.swift */; };
 		AE3B4A1423E6D7970029A06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B4A1323E6D7970029A06F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE267A0823E9AA6D00F74DB9 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
 		AE3B4A0C23E6D7970029A06F /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3B4A0F23E6D7970029A06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE3B4A1123E6D7970029A06F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				AE3B4A0F23E6D7970029A06F /* AppDelegate.swift */,
 				AE3B4A1123E6D7970029A06F /* SceneDelegate.swift */,
 				AE3B4A1323E6D7970029A06F /* ViewController.swift */,
+				AE267A0823E9AA6D00F74DB9 /* SecondScreen.swift */,
 				AE3B4A1523E6D7970029A06F /* Main.storyboard */,
 				AE3B4A1823E6D7990029A06F /* Assets.xcassets */,
 				AE3B4A1A23E6D7990029A06F /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3B4A1423E6D7970029A06F /* ViewController.swift in Sources */,
+				AE267A0923E9AA6D00F74DB9 /* SecondScreen.swift in Sources */,
 				AE3B4A1023E6D7970029A06F /* AppDelegate.swift in Sources */,
 				AE3B4A1223E6D7970029A06F /* SceneDelegate.swift in Sources */,
 			);
