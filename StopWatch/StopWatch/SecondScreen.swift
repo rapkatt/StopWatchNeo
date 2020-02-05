@@ -10,7 +10,7 @@ import UIKit
 
 class SecondScreen: UIViewController {
     
-    var seconds = 30
+    var (hours,minutes,seconds) = (0,0,30)
     var timer = Timer()
     
     
@@ -24,7 +24,9 @@ class SecondScreen: UIViewController {
     
     @IBAction func slider(_ sender: UISlider) {
         seconds = Int(sender.value)
-        labelTime.text = String(seconds)
+        //labelTime.text = String(seconds)s
+        let secondsString2 = seconds > 9 ? "\(seconds)" : "0\(seconds)"
+        labelTime.text = "00:00:\(secondsString2)"
         
     }
     
@@ -44,9 +46,9 @@ class SecondScreen: UIViewController {
     }
     @IBAction func buttonStop(_ sender: Any) {
         timer.invalidate()
-        seconds = 30
+        (hours,minutes,seconds) = (0,0,30)
         slider.setValue(30, animated: true)
-        labelTime.text = String(seconds)
+        labelTime.text = "00:00:30"
         
         playOutlet.isEnabled = true
         pauseOutlet.isEnabled = true
@@ -55,7 +57,13 @@ class SecondScreen: UIViewController {
     @objc func updateTimer(){
         
         seconds -= 1
-        labelTime.text = String(seconds)
+       // labelTime.text = String(seconds)
+        let secondsString = seconds > 9 ? "\(seconds)" : "0\(seconds)"
+        let minutesString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
+        let hoursString = hours > 9 ? "\(hours)" : "0\(hours)"
+        labelTime.text = "\(hoursString):\(minutesString):\(secondsString)"
+        
+        slider.value = Float(seconds)
         
         if seconds == 0 {
             timer.invalidate()
